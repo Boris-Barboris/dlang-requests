@@ -4,20 +4,11 @@
     "copyright": "Copyright © 2016, igor",
     "authors": ["ikod"],
     "license": "BSL-1.0",
-    "sourcePaths": ["source"],
-    "importPaths": ["source"],
-    "dependencies": {
-        "cachetools": "~>0"
-    },
     "configurations": [
         {
-            "name": "std"
-        },
-        {
-            "name": "vibed",
-            "versions": ["vibeD"],
+            "name": "std",
             "dependencies": {
-                "vibe-d": ">=0.8.0"
+                "cachetools": "~>0"
             }
         }
     ],
@@ -35,13 +26,11 @@
         "unittest": {
             "buildOptions": ["unittests", "debugMode", "debugInfo"],
             "versions": ["httpbin"],
-            "debugVersions": ["requests", "httpd"],
-            "sourcePaths": ["source", "tests"]
+            "debugVersions": ["requests", "httpd"]
         },
         "localtest": {
             "buildOptions": ["unittests", "debugMode", "debugInfo"],
-            "versions": ["localtest"],
-            "sourcePaths": ["source", "tests"]
+            "versions": ["localtest"]
         }
     }
 }
